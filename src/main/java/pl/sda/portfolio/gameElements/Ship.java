@@ -6,8 +6,30 @@ public class Ship {
 
     private ArrayList<String> fieldPosition;
     private String shipName;
+    private int shipSize;
     //TODO: size of ship
 
+
+    public Ship(String shipName, int shipSize) {
+        this.shipName = shipName;
+        this.shipSize = shipSize;
+    }
+
+    public ArrayList<String> getFieldPosition() {
+        return fieldPosition;
+    }
+
+    public String getShipName() {
+        return shipName;
+    }
+
+    public int getShipSize() {
+        return shipSize;
+    }
+
+    public void setShipSize(int shipSize) {
+        this.shipSize = shipSize;
+    }
 
     public void setFieldPosition(ArrayList<String> fieldPosition) {
         this.fieldPosition = fieldPosition;

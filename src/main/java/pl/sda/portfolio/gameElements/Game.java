@@ -22,24 +22,33 @@ public class Game {
          * Submarine - 2sq - 3units
          * Patrol Boat - 1sq - 4units
          */
+        
+        Ship battleship = new Ship("Bettleship",4);
+        Ship firstDestroyer = new Ship("Destroyer A",3);
+        Ship secondDestroyer = new Ship("Destroyer B",3);
+        Ship firstSubmarine = new Ship("Submarine A", 2);
+        Ship secondSubmarine = new Ship("Submarine B", 2);
+        Ship thirdSubmarine = new Ship("Submarine C", 2);
+        Ship firstPatrolBoat = new Ship("Patrol Boat A", 1);
+        Ship secondPatrolBoat = new Ship("Patrol Boat B", 1);
+        Ship thirdPatrolBoat = new Ship("Patrol Boat C", 1);
+        Ship fourthPatrolBoat = new Ship("Patrol Boat D", 1);
 
-        //TODO: constructor
-        Ship firstDestroyer = new Ship();
-        firstDestroyer.setShipName("Destroyer A");
-        Ship secondDestroyer = new Ship();
-        secondDestroyer.setShipName("Destroyer B");
-        Ship thirdDestroyer = new Ship();
-        thirdDestroyer.setShipName("Destroyer C");
-        Ship fourthDestroyer = new Ship();
-        fourthDestroyer.setShipName("Destroyer D");
-
+        listOfShips.add(battleship);
         listOfShips.add(firstDestroyer);
         listOfShips.add(secondDestroyer);
+        listOfShips.add(firstSubmarine);
+        listOfShips.add(secondSubmarine);
+        listOfShips.add(thirdSubmarine);
+        listOfShips.add(firstPatrolBoat);
+        listOfShips.add(secondPatrolBoat);
+        listOfShips.add(thirdPatrolBoat);
+        listOfShips.add(fourthPatrolBoat);
 
         System.out.println("Your objective of the game is to destroy the opposing player's whole fleet");
 
         for (Ship createdShip: listOfShips){
-            ArrayList<String> newPosition = board.addingShipToBoard(3);
+            ArrayList<String> newPosition = board.addingShipToBoard(createdShip.getShipSize());
             createdShip.setFieldPosition(newPosition);
         }
 
